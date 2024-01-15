@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
   <meta charset="utf-8">
-  <title>Informações Escolares</title>
+  <title>Informações Pessoais</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
@@ -42,7 +42,7 @@
             <span class="tooltip__content">Dashboard</span>
           </a>
         </li>
-        <li>
+        <li class="informações-pessoais">
           <a href="#payments" title="Payments" class="tooltip">
             <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="44" height="44"
               viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round"
@@ -52,13 +52,13 @@
               <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
             </svg>
             <span class="link hide">Informações Pessoais</span>
-            <span class="tooltip__content">Paymenstroke="#2c3e50"ts</span>
+            <span class="tooltip__content">Payments</span>
           </a>
         </li>
-        <li class="informações-escolares">
+        <li>
           <a href="#analytics" title="Analytics" class="tooltip">
             <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home-2" width="44" height="44"
-              viewBox="0 0 24 24" stroke-width="1.5"  fill="none" stroke-linecap="round"
+              viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round"
               stroke-linejoin="round">
               <path stroke="none" d="M0 0h24v24H0z" fill="none" />
               <path d="M5 12l-2 0l9 -9l9 9l-2 0" />
@@ -135,147 +135,134 @@
 
   </nav>
 
-  <Main>
+  <main>
+    <div class="quadrado">
 
-    <h2><b>Informações escolares</b></h2>
-    <h4><b>ABA Global School</b></h4>
+      <div class="avatar">
+        <img src="icone.png" alt="Ícone do Aluno">
+        <div class="ola">
+          <h4>Olá aluno(a)</h4>
+        </div>
+      </div>
 
-    <form>
-      <div class="endereco">
-        <label for="endereco">Endereço</label>
-        <input type="text" id="endereco" name="endereco">
+      <div class="search-container">
+        <input type="text" class="search-input" placeholder="Pesquisar..." id="searchInput"
+          onkeydown="handleKeyPress(event)">
+        <button class="search-button">&#128269;</button>
       </div>
-      <div class="ano">
-        <label for="ano">Ano de escolaridade atual</label>
-        <input type="text" id="ano" name="ano">
+
+
+      <h2>Informações Pessoais</h2>
+      <h4>ABA Global School</h4>
+
+      <form>
+        <div class="pai-noda">
+          <div class="nome">
+            <label class="label" for="endereco">Nome Completo</label>
+            <input class="input" type="text" id="endereco" name="endereco">
+          </div>
+
+          <div class="data">
+            <label for="data_nascimento">Data de Nascimento:</label>
+            <input type="date" id="data_nascimento" name="data_nascimento">
+          </div>
+
+        </div>
+
+        <div class="pai-tt">
+
+          <div class="tt">
+            <label class="label" for="genero">Gênero</label>
+            <select class="input" id="genero" name="Genero">
+              <option value="masculino">Masculino</option>
+              <option value="feminino">Feminino</option>
+              <option value="nao-binario">Não Binário</option>
+            </select>
+          </div>
+          <div class="matricula">
+            <label class="label" for="turno">Matrícula</label>
+            <input class="input" type="text" id="turno" name="Matricula">
+          </div>
+
+        </div>
+    </div>
+
+    <div class="quadrado2">
+
+      <h3>Informações familiares</h3>
+
+      <div class="pai-nep">
+
+        <div class="nome">
+          <label for="responsavel1">Nome do Responsável 1</label>
+          <input type="text" id="responsavel1" name="responsavel1">
+        </div>
+
+        <div class="email">
+          <label for="email">Email</label>
+          <input type="text" id="email" name="email">
+        </div>
+
+        <div class="phone">
+          <label for="telefone">Phone</label>
+          <input type="text" id="telefone" name="telefone">
+        </div>
+
       </div>
-      <div class="tt">
-        <label for="turma">Turma</label>
-        <input type="text" id="turma" name="turma">
-        <label for="turno">Turno</label><div class="informacao">
+
+      <div class="pai-ind">
+
+        <div class="irmaos">
+          <label for="responsavel1">Tem Irmaos?</label>
+          <input type="text" id="responsavel1" name="responsavel1">
+        </div>
+
+        <div class="nome-irmao">
+          <label for="email">Nome</label>
+          <input type="text" id="email" name="email">
+        </div>
+
+        <div class="data-irmao">
+          <label for="telefone">Data de nascimento</label>
+          <input type="text" id="telefone" name="telefone">
+        </div>
+      </div>
+
+      <div class="pai-nep2">
+
+        <div class="nome2">
+          <label for="responsavel1">Nome do Responsável 2 </label>
+          <input type="text" id="responsavel1" name="responsavel1">
+        </div>
+
+        <div class="email2">
+          <label for="email">Email</label>
+          <input type="text" id="email" name="email">
+        </div>
+
+        <div class="phone2">
+          <label for="telefone">Phone</label>
+          <input type="text" id="telefone" name="telefone">
+        </div>
+      </div>
+
+      <div class="informacao">
         <div class="label1">
-          <label for="informacao">Informações pertinentes sobre a história escolar do aluno</label>
+          <label for="informacao">Informações pertinentes sobre o contexto familiar</label>
         </div>
         <input type="text" id="informacao" name="informacao">
       </div>
-        <input type="text" id="turno" name="turno">
-      </div>
-      
+
+
+
+    </div>
+
 
     </form>
-
-    <div class="quadrado"></div>
-    <div class="quadrado2"></div>
-
-    <h3>Profissionais que acompanham o estudante na escola</h3>
-    <div class="botao">
-      <button>+ Add New</button>
-      <button class="remove-button">Remove</button>
     </div>
-
-
-    <div class="container">
-      <figure class="figure">
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user-circle" width="70" height="70"
-          viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round"
-          stroke-linejoin="round">
-          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-          <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
-          <path d="M12 10m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
-          <path d="M6.168 18.849a4 4 0 0 1 3.832 -2.849h4a4 4 0 0 1 3.834 2.855" />
-        </svg>
-        <figcaption>
-          <h5>Carla Ferreira</h5>
-          <p>Diretora de Marketing</p>
-        </figcaption>
-      </figure>
-
-      <figure class="figure">
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user-circle" width="70" height="70"
-          viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round"
-          stroke-linejoin="round">
-          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-          <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
-          <path d="M12 10m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
-          <path d="M6.168 18.849a4 4 0 0 1 3.832 -2.849h4a4 4 0 0 1 3.834 2.855" />
-        </svg>
-        <figcaption>
-          <h5>Elias Ferreira</h5>
-          <p>Gerente de Marketing</p>
-        </figcaption>
-      </figure>
-
-      <figure class="figure">
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user-circle" width="70" height="70"
-          viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round"
-          stroke-linejoin="round">
-          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-          <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
-          <path d="M12 10m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
-          <path d="M6.168 18.849a4 4 0 0 1 3.832 -2.849h4a4 4 0 0 1 3.834 2.855" />
-        </svg>
-        <figcaption>
-          <h5>Sheila Ramos</h5>
-          <p>Gerente de Marketing</p>
-        </figcaption>
-      </figure>
-    </div>
-
-  </Main>
-
-  <figure class="figurahome">
-    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user-circle" width="44" height="44"
-      viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round"
-      stroke-linejoin="round">
-      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-      <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
-      <path d="M12 10m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
-      <path d="M6.168 18.849a4 4 0 0 1 3.832 -2.849h4a4 4 0 0 1 3.834 2.855" />
-    </svg>
-    <figcaption>
-      <h5>Hi, Jamie!</h5>              
-    </figcaption>
-    <div class="iconsino">
-      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-bell" width="14" height="14" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
-        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-        <path d="M10 5a2 2 0 1 1 4 0a7 7 0 0 1 4 6v3a4 4 0 0 0 2 3h-16a4 4 0 0 0 2 -3v-3a7 7 0 0 1 4 -6" />
-        <path d="M9 17v1a3 3 0 0 0 6 0v-1" />
-      </svg>
-    </div>
-    
-  </figure>
-
-  <div class="buscar-box">
-    <div class="lupa-buscar">
-      <<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="25" height="25"
-        viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round"
-        stroke-linejoin="round">
-        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-        <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
-        <path d="M21 21l-6 -6" />
-        </svg>
-    </div><!--lupa-buscar-->
-
-    <div class="input-buscar">
-      <input type="text" name="" id="" placeholder="Search here...">
-    </div><!--input-buscar-->
-
-    <div class="btn-fechar">
-      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-square-rounded-x" width="25"
-        height="25" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round"
-        stroke-linejoin="round">
-        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-        <path d="M10 10l4 4m0 -4l-4 4" />
-        <path d="M12 3c7.2 0 9 1.8 9 9s-1.8 9 -9 9s-9 -1.8 -9 -9s1.8 -9 9 -9z" />
-      </svg>
-    </div><!--btn-fechar-->
-  </div><!--buscar-box--> 
-
-
-
+  </main>
 
   <script src="script.js"></script>
-  <script src="buscar.js"></script>
 </body>
 
 </html>
