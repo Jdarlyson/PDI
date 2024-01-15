@@ -553,18 +553,20 @@ input {
   height: 20px; /*Altura do input ano*/
 }
 
-#informacao {
+#informacao {  
   margin-top: 20px; /*Posicionando para baixo o input informacao*/
   display:block; /*Foi usado para que o label ficasse em cima do input, dessa forma ele perdeu a propriedade que estava no form*/
   width: 710px; /*Largura do input informacao*/
   height: 60px; /*Altura do input informacao*/
   margin-left: -3px; /*Posicionando a esquerda o input informacao*/
+  
 }
 
 /*Tentei de varias forma ajusta sem colocar uma div, mas não consegui, devido a isso foi criado uma div label1 para o label da informacao*/
-.label1 {
-  margin-left: -290px; /*Posicionando a esquerda o label do input informacao*/
-  margin-top: 10px; /*Posicionando para baixo o label do input informacao*/
+.label1 {  
+  text-align: left;
+  margin-top: 40px; /*Posicionando para baixo o label do input informacao*/
+  
 }
 
 .figura {
